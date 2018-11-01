@@ -9,7 +9,6 @@ class App extends React.Component {
             <div>
                 <Menu />
                 <Route exact path="/" component={Home} />
-
                 <Switch>
                     <Route path="/about/:name" component={About} />
                     <Route path="/about" component={About} />

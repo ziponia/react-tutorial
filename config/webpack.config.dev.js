@@ -83,15 +83,12 @@ module.exports = {
   devtool: 'cheap-module-source-map',
   // These are the "entry points" to our application.
   // This means they will be the "root" imports that are included in JS bundle.
-  entry: {
-    dev: 'react-error-overlay',
-    vendor: [
-      'react',
-      'react-dom',
-      'react-router-dom'
-    ],
-    app: ['react-dev-utils/webpackHotDevClient', paths.appIndexJs]
-  },
+  entry: [
+    'react-hot-loader/patch',
+    'react-dev-utils/webpackHotDevClient',
+    'react-error-overlay',
+    paths.appIndexJs
+  ],
   output: {
     // Add /* filename */ comments to generated require()s in the output.
     pathinfo: true,
@@ -218,6 +215,7 @@ module.exports = {
                     },
                   },
                 ],
+                'react-hot-loader/babel'
               ],
               // This is a feature of `babel-loader` for webpack (not Babel itself).
               // It enables caching results in ./node_modules/.cache/babel-loader/

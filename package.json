@@ -70,7 +70,8 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "cross-env": "^5.2.0"
+    "cross-env": "^5.2.0",
+    "react-hot-loader": "^4.0.0"
   },
   "jest": {
     "collectCoverageFrom": [
