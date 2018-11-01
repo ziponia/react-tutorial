@@ -1,11 +1,13 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { Home, About } from '../pages';
+import Menu from '../components/Menu';
 
 class App extends React.Component {
     render() {
         return (
             <div>
+                <Menu />
                 <Route exact path="/" component={Home} />
 
                 <Switch>
