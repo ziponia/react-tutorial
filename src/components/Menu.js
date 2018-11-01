@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const Menu = () => {
 
@@ -18,6 +18,9 @@ const Menu = () => {
                 </li>
                 <li>
                     <NavLink to="/about/foo" activeStyle={activeStyle}>About foo</NavLink>
+                </li>
+                <li>
+                    <NavLink to="/posts" activeStyle={activeStyle}>Posts</NavLink>
                 </li>
             </ul>
             <hr />
