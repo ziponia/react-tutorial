@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import { Home, About, Posts } from '../pages/index.async';
+import { Home, About, Posts } from '../pages';
 import Menu from '../components/Menu';
 
 class App extends React.Component {
