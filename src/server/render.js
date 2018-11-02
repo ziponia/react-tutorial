@@ -6,6 +6,7 @@ import { Provider } from 'react-redux';
 
 import { renderToString } from 'react-router-server';
 import configureStore from '../redux/configureStore';
+import { Helmet } from 'react-helmet';
 
 const render = async (location) => {
     const store = configureStore();
@@ -18,8 +19,10 @@ const render = async (location) => {
         </StaticRouter>
     );
 
+    const helmet = Helmet.renderStatic();
+
     return {
-        html, state: store.getState()
+        html, state: store.getState(), helmet
     }
 }
 
