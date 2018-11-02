@@ -22,6 +22,9 @@ const Menu = () => {
                 <li>
                     <NavLink to="/posts" activeStyle={activeStyle}>Posts</NavLink>
                 </li>
+                <li>
+                    <NavLink to="users" activeStyle={activeStyle}>Users</NavLink>
+                </li>
             </ul>
             <hr />
         </div>

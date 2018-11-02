@@ -3,7 +3,7 @@ import {BrowserRouter} from 'react-router-dom';
 import App from '../shared/App';
 import { Provider } from 'react-redux';
 
-import store from '../../redux/store';
+import store from '../redux/store';
 
 class Root extends Component {
   render() {
