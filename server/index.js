@@ -4,11 +4,15 @@ const path = require('path');
 const fs = require('fs');
 const app = new Koa();
 
-const indexHtml = fs.readFileSync(path.resolve(__dirname, '../build/index.html'), { encoding: 'utf8'});
+const render = require('./render');
+
+app.use((ctx, next) => {
+    if (ctx.path === '/') return render(ctx);
+    return next();
+});
+
 
 app.use(serve(path.resolve(__dirname, '../build')));
-app.use(ctx => {
-    ctx.body = 'Hello world';
-});
+app.use(render);
 
 app.listen(3001);
